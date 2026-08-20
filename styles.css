@@ -692,7 +692,7 @@ h2 {
   }
 
   .hero__side {
-    max-width: 520px;
+    max-width: none;
   }
 
   .tile--large {
@@ -736,6 +736,25 @@ h2 {
   }
 }
 
+@media (min-width: 561px) and (max-width: 860px) {
+  .hero__side {
+    grid-template-columns: minmax(0, 1.08fr) minmax(250px, 0.92fr);
+    align-items: stretch;
+  }
+
+  .hero__side .flip-word {
+    margin-bottom: 0;
+  }
+
+  .hero__side .status-panel {
+    min-height: 210px;
+  }
+
+  .hero__side > p {
+    grid-column: 1 / -1;
+  }
+}
+
 @media (max-width: 560px) {
   .site-header,
   .hero,
@@ -775,6 +794,14 @@ h2 {
 
   .flip-word {
     padding: 8px;
+  }
+
+  .status-panel {
+    min-height: 190px;
+  }
+
+  .status-panel strong {
+    font-size: clamp(3.2rem, 17vw, 4.8rem);
   }
 
   h2 {
